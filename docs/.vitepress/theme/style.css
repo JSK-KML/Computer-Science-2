@@ -53,3 +53,16 @@
 .VPNavBar .content-body .VPNavBarHamburger {
     margin-left: auto;
 }
+
+/* Keyboard keys: same blue keycap look as CP115's inline <kbd> styling. */
+.vp-doc kbd {
+    color: #fff;
+    background: #0047A3;
+    border: 1px solid #0060CC;
+    padding: 4px 10px;
+    border-radius: 6px;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .45), 0 1px 3px rgba(0, 0, 0, .25);
+    font-size: .85em;
+    line-height: 1;
+    user-select: none;
+}

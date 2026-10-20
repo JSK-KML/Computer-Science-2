@@ -14,6 +14,11 @@ export default defineConfig({
   title: "CS125 Computer Science 2",
   description: "Course, Lectures and Labs Informations",
   base: '/Computer-Science-2/',
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/Computer-Science-2/favicon.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/Computer-Science-2/favicon.png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/Computer-Science-2/apple-touch-icon.png' }]
+  ],
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -37,7 +42,9 @@ export default defineConfig({
         text: 'Labs',
         items: [
           { text: 'Lab 1', link: '/labs/lab-01' },
-          { text: 'Lab 2', link: '/labs/lab-02' }
+          { text: 'Lab 2', link: '/labs/lab-02' },
+          { text: 'Lab 3', link: '/labs/lab-03' },
+          { text: 'Lab 4', link: '/labs/lab-04' }
         ],
         activeMatch: '^/labs/'
       }
@@ -66,7 +73,9 @@ export default defineConfig({
           text: 'Labs',
           items: [
             { text: 'Lab 1', link: '/labs/lab-01' },
-            { text: 'Lab 2', link: '/labs/lab-02' }
+            { text: 'Lab 2', link: '/labs/lab-02' },
+            { text: 'Lab 3', link: '/labs/lab-03' },
+            { text: 'Lab 4', link: '/labs/lab-04' }
           ]
         }
       ]

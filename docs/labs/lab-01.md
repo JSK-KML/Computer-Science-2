@@ -5,7 +5,7 @@ title : Lab 1 - Flowgorithm to Python
 
 # Lab 01 : Flowgorithm to Python
 
-In this lab you will draw an algorithm as a flowchart in **Flowgorithm**, run it to test your logic, then export it to **Python** and run the code from the terminal.
+In this lab you will draw an algorithm as a flowchart in **Flowgorithm**, run it to test your logic, then export it to **Python** code. You will start with the **sequence** structure and then add **selection**.
 
 ## Before You Begin
 
@@ -13,11 +13,8 @@ Create a folder for all your CS125 lab work so your files are easy to find.
 
 1. On the `Desktop`, create a new folder named `yourname-cs125` (for example `aiman-cs125`).
 2. Inside it, create another folder named `lab01`.
-3. Open **VS Code**, click `File` → `Open Folder...` and open your `yourname-cs125` folder.
 
-::: warning REMINDER
-Many students share the same PC. Make sure you open **your own** folder, not a classmate's, before you start.
-:::
+You will save every file for this lab inside `lab01`.
 
 ## Introduction to Flowgorithm
 
@@ -41,7 +38,7 @@ Throughout this walkthrough we will build a flowchart for this scenario:
 
 | **Input** | **Process** | **Output** |
 |---|---|---|
-| `mealPrice` | Calculate the final price: meal price plus 10% government tax and 5% service tax (15% in total) | `finalPrice` |
+| `mealPrice` | Calculate the final price based on meal price and 10% government tax and 5% service tax | `finalPrice` |
 
 For this walkthrough we are focusing on how to use **Flowgorithm**, so take it step by step.
 
@@ -83,35 +80,39 @@ After finishing those steps, this is what you should see.
     <img src="/public/labs/lab-01/lab-1-6.png" alt="drawing" width="400"/>
 </p>
 
+#### Adding the Output <Badge type="warning" text="Task" />
+
 Now repeat the process again, but this time, use the `Output` shape and enter `finalPrice` as the variable name. Make sure that you click the arrow between `Input` and `End` so you add the `Output` shape in the correct sequence.
 
-#### Declaring the Variable
+#### Declaring the Variables
 
-In **Flowgorithm**, every variable must be declared first, separately from the `Input` and `Output` shapes. Click the arrow between `Main` and `Input` so we can declare the variable used in the `Input` shape.
+Your flowchart now uses two variables, `mealPrice` and `finalPrice`, but **Flowgorithm** does not know about them yet. Before a variable can be used, it must be **declared** with a `Declare` shape, and that `Declare` shape must sit **above** the shape that uses the variable.
 
-In the popup window, under the category **Statement**, choose the `Declare` shape.
+So we now go back and add a `Declare` shape above `Input mealPrice` and another one above `Output finalPrice`.
+
+Start with `mealPrice`. Click the arrow between `Main` and `Input mealPrice`. In the popup window, under the category **Statement**, choose the `Declare` shape.
 
 <p align="center">
     <img src="/public/labs/lab-01/lab-1-7.png" alt="drawing" width="400"/>
 </p>
 
-Double click the `Declare` shape and name the variable exactly as you put in the input, which in our case is `mealPrice`, and choose the `Integer` data type. Click `OK` to finalise it.
+Double click the `Declare` shape, name the variable exactly as you typed it in the `Input` shape, which is `mealPrice`, and choose the `Integer` data type. Click `OK` to finalise it.
 
 <p align="center">
     <img src="/public/labs/lab-01/lab-1-8.png" alt="drawing" width="400"/>
 </p>
 
-The result afterwards should look like the below.
+`mealPrice` is now declared above the `Input` that uses it. Your flowchart should look like this:
 
 <p align="center">
     <img src="/public/labs/lab-01/lab-1-9.png" alt="drawing" width="300"/>
 </p>
 
-Now declare `finalPrice` too. Click the arrow between `Input mealPrice` and `Output finalPrice`, add a `Declare` shape, name it `finalPrice` and choose the `Integer` data type. Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file.
+#### Declaring finalPrice <Badge type="warning" text="Task" />
 
-::: warning REMINDER
-Make sure you click the correct arrow to ensure that each variable is declared in the correct sequence.
-:::
+Now do the same for `finalPrice`. Click the arrow between `Input mealPrice` and `Output finalPrice`, add a `Declare` shape, name it `finalPrice` and choose the `Integer` data type. This places the declaration above the `Output` that uses it.
+
+Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file.
 
 ## Creating a Process (The Assign Shape)
 
@@ -146,7 +147,7 @@ You can only assign **into** a variable that has already been declared, and you 
 
 ### Adding More Than One Input or Output
 
-Our meal-price example used a single input and a single output, but several of the exercises below need more than one of each (the storage converter, for example, has one input and **four** outputs).
+Our meal-price example used a single input and a single output, but some problems need more than one of each (for example, converting a temperature in Celsius to both Fahrenheit and Kelvin needs one input and **two** outputs).
 
 Adding them works exactly the same way: click the arrow at the point in the sequence where the new shape should go, then add another `Declare`, `Input`, `Assign`, or `Output`. Every variable must still be declared before it is used.
 
@@ -176,9 +177,7 @@ Always test with a value you can work out by hand. If your flowchart and your ca
 
 One of the most useful features of **Flowgorithm** is that it can translate your finished flowchart into real code in many languages, including **Python**. This lets you connect the diagram you understand to the code you are about to learn.
 
-First, in **VS Code**, right click the `lab01` folder and click `New File`. Name the file `lab-01-1.py`.
-
-Back in **Flowgorithm**, at the top bar, click the `Source Code Viewer`.
+In **Flowgorithm**, at the top bar, click the `Source Code Viewer`.
 
 <p align="center">
     <img src="/public/labs/lab-01/lab-1-15.png" alt="drawing" width="400"/>
@@ -190,169 +189,153 @@ A popup window will appear. Click the dropdown at the top left and choose `Pytho
     <img src="/public/labs/lab-01/lab-1-16.png" alt="drawing" width="400"/>
 </p>
 
-Copy the generated code from the window into your `lab-01-1.py` file and save it.
-
-::: info NOTE
-Take a moment to read the **Python** code it produced. Each `Declare`, `Input`, `Assign`, and `Output` shape in your flowchart became a line of code. You will be writing this kind of code by hand soon, so seeing the flowchart and the code side by side is good practice.
-:::
-
-## Working with the Command Line
-
-So far you have run your flowchart with the green arrow and managed your files by clicking. Programmers do much of this same work by typing into the **terminal** instead, giving the computer one **command** at a time. In this section you will run the **Python** file you just exported entirely from the command line.
-
-Open a terminal in **VS Code** with `Terminal` → `New Terminal`. A panel appears at the bottom, with a line waiting for your first command.
-
-A terminal is always "inside" one folder, called the **working directory**, so the first thing to do is ask where you are:
-
-```bash
-pwd
-```
-
-`pwd` (*print working directory*) prints the full path of the folder you are currently in. The output looks like this:
-
-```
-/c/Users/Aiman/Desktop/aiman-cs125
-```
-
-Now take a look at what is inside the current directory:
-
-```bash
-ls
-```
-
-`ls` (*list*) shows the files and folders inside your working directory:
-
-```
-lab01
-```
-
-To move into a folder, use `cd` (*change directory*):
-
-```bash
-cd lab01
-```
-
-Run `pwd` again and you will see you are now inside `lab01`:
-
-```
-/c/Users/Aiman/Desktop/aiman-cs125/lab01
-```
-
-Run `ls` here, and the output lists the two files you saved earlier:
-
-```
-lab-01-1.fprg  lab-01-1.py
-```
-
-That confirms you are in the right place. Now run the file with the **Python** interpreter:
-
-```bash
-python lab-01-1.py
-```
-
-The program runs, asks for your input just as before, and prints the result straight into the terminal.
-
-::: info NOTE
-If `python` is not recognised, try `py lab-01-1.py` instead. On **Windows** the Python launcher is sometimes called `py`.
-:::
-
-::: tip WHY
-Clicking the ▶ button in **VS Code** does all of this for you: it opens a terminal and runs `python` on your file behind the scenes. Learning the command underneath means you understand what the button is really doing.
-:::
-
-## Exercises <Badge type="tip" text="Task" />
-
-For each exercise:
-
-1. Build the flowchart in **Flowgorithm** and save it in your `lab01` folder with the file name given.
-2. Run it in **Flowgorithm** using the **Test** input and check that your answer matches the **Expected** output.
-3. Export it to **Python** with the same name (for example `exercise-1.py`) and run it in the terminal with the same test input.
+Now save the code as a **Python** file. In the `Source Code Viewer` toolbar, click the **Save** button (the floppy disk icon). Save it inside your `lab01` folder and name it `lab-01-1.py`.
 
 ::: warning REMINDER
-If your output does not match the expected answer, check your `Assign` expressions and the order of your shapes before moving on.
+Make sure the file name ends with `.py`. Without it, **Python** will not recognise the file as a program.
 :::
 
-### Exercise 1 – Hotel Reservation <Badge type="tip" text="Question" />
+::: danger ATTENTION
+Exporting to **Python** from **Flowgorithm** has a bug: the brackets `( )` in your expressions are not carried over into the code. Without the brackets, the calculation can run in a different order and give a wrong answer, which is a **logic error**. Always compare the exported expression with your `Assign` shape and add back any missing brackets.
+:::
 
-Mr Rahman plans to make a reservation for a hotel room in Langkawi Island. The basic rate is RM250.00 per night and service charge is 15% of the room rate. Determine the total payment if he books the hotel room for n nights.
+## Implementing Selection
 
-- **File:** `exercise-1.fprg` and `exercise-1.py`
-- **Inputs:** `numNight`
-- **Outputs:** `totalPayment`
-- **Test:** `numNight` = 2 → **Expected:** `totalPayment` = 575
+So far every flowchart you built runs in a straight line, one shape after another. This is the **sequence** structure. Now you will add **selection**, so your flowchart can make decisions and take different paths depending on the input.
 
-### Exercise 2 – Photo Printing <Badge type="tip" text="Question" />
+Selection in a flowchart is represented by the diamond shape. In **Flowgorithm**, it is the same. Let's use this scenario to implement selection in **Flowgorithm**:
 
-A phone shop charges customers to print photos. There is a fixed service fee of RM2 per order, plus RM0.50 for each photo printed. Given the number of photos a customer wants printed, calculate the total cost of their order.
+> MyHealth magazine is sold at RM5.00 each if at least 5 units of the magazine are purchased, and it is sold at the price of RM7.00 each otherwise. Calculate the price a customer has to pay after they enter the quantity of the magazines that they purchased.
 
-- **File:** `exercise-2.fprg` and `exercise-2.py`
-- **Inputs:** `numPhotos`
-- **Outputs:** `totalCost`
-- **Test:** `numPhotos` = 10 → **Expected:** `totalCost` = 7
+Let's skip the `Declare` and `Input` shapes for this question. If you forgot how to do that, you can refer back to [Creating Input and Output](#creating-input-and-output).
 
-### Exercise 3 – Money Changer <Badge type="tip" text="Question" />
-
-A money changer charges a 2% commission on the amount of Ringgit handed over. The commission is deducted first, and only the remaining Ringgit is converted to Thai Baht at the day's exchange rate. Calculate the amount of Baht received.
-
-- **File:** `exercise-3.fprg` and `exercise-3.py`
-- **Inputs:** `ringgit`, `exchangeRate`
-- **Outputs:** `baht`
-- **Test:** `ringgit` = 1000, `exchangeRate` = 7.5 → **Expected:** `baht` = 7350
-
-### Exercise 4 – Cookie Calories <Badge type="tip" text="Question" />
-
-A pack contains 40 pieces of cookies. The calorie info claims 10 servings per pack. Each serving equals 300 calories. Calculate the total calories consumed based on number of packs eaten.
-
-- **File:** `exercise-4.fprg` and `exercise-4.py`
-- **Inputs:** `packsEaten`
-- **Outputs:** `totalCalories`
-- **Test:** `packsEaten` = 2 → **Expected:** `totalCalories` = 6000
-
-### Exercise 5 – Storage Conversion <Badge type="tip" text="Question" />
-
-Prompt user to input a size in Kilobyte, and convert the input into Megabyte, Gigabyte, Terabyte and Petabyte. Use 1 MB = 1024 KB, 1 GB = 1024 MB, and so on.
-
-- **File:** `exercise-5.fprg` and `exercise-5.py`
-- **Inputs:** `kilobyte`
-- **Outputs:** `megabyte`, `gigabyte`, `terabyte`, `petabyte`
-- **Test:** `kilobyte` = 1048576 → **Expected:** `megabyte` = 1024, `gigabyte` = 1, `terabyte` = 0.0009765625, `petabyte` = 0.00000095367431640625 (Python may show this as `9.5367431640625e-07`)
-
-### Exercise 6 – Temperature Conversion <Badge type="tip" text="Question" />
-
-Prompt user to input a temperature in Celsius and convert it to Fahrenheit and Kelvin.
-
-- **File:** `exercise-6.fprg` and `exercise-6.py`
-- **Inputs:** `celsius`
-- **Outputs:** `fahrenheit`, `kelvin`
-- **Test:** `celsius` = 100 → **Expected:** `fahrenheit` = 212, `kelvin` = 373.15
-
-### Exercise 7 – Wage to Mow Yard <Badge type="tip" text="Question" />
-
-The wage to mow the yard is RM2.00 per square meter. The yard area is the large rectangle minus the house rectangle. You are given the length and width of the yard boundary and the length and width of the house. Calculate the wage.
+After declaring the input and accepting input from the user, you will get this:
 
 <p align="center">
-    <img src="/public/labs/lab-01/mow-yard.png" alt="drawing" width="400"/>
+    <img src="/public/labs/lab-01/lab-1-17.png" alt="drawing" width="300"/>
 </p>
 
-- **File:** `exercise-7.fprg` and `exercise-7.py`
-- **Inputs:** `yardLength`, `yardWidth`, `houseLength`, `houseWidth`
-- **Outputs:** `wage`
-- **Test:** `yardLength` = 20, `yardWidth` = 15, `houseLength` = 10, `houseWidth` = 8 → **Expected:** `wage` = 440
+You have one input, `magazineNumber`. This is a simple selection (if–else) problem: if `magazineNumber` ≥ 5, the unit price is RM5.00. Otherwise, the unit price is RM7.00. Note the boundary case "at least 5", so you must include 5.
 
-### Exercise 8 – Air-Conditioner Running Cost <Badge type="tip" text="Question" />
+Now that we have established the structure of the algorithm, we have discovered a new variable, which is `unitPrice`. Declare the variable using the `Declare` shape just under the input.
 
-Pak Long has been complaining about his electricity bill. His old air-conditioner draws a certain amount of power in watts, and he leaves it running for a number of hours every night. Electricity is charged at RM0.218 per kilowatt-hour. Pak Long wants to know how much that one air-conditioner costs him to run each night, and across a whole month of 30 days.
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-18.png" alt="drawing" width="300"/>
+</p>
 
-- **File:** `exercise-8.fprg` and `exercise-8.py`
-- **Inputs:** `watts`, `hours`
-- **Outputs:** `nightCost`, `monthCost`
-- **Test:** `watts` = 1500, `hours` = 8 → **Expected:** `nightCost` = 2.616, `monthCost` = 78.48
+The selection will be added after `unitPrice` has been declared. The reason we do this is so that we only need to declare it once. If we declared the variable after the selection, we would have to declare it two times, one after the `True` condition and one after the `False` condition.
+
+To add the selection, click the arrow underneath `unitPrice` and a popup window will open. Under the **Control** section, click the `If` (diamond) shape.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-19.png" alt="drawing" width="500"/>
+</p>
+
+The diamond shape will automatically have two arrows coming out of it. The left one is for `False` and the right one for `True`.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-20.png" alt="drawing" width="300"/>
+</p>
+
+Double click the diamond shape and a popup window will appear that prompts you to enter the condition. For our question, we will enter `magazineNumber >= 5` as our condition.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-21.png" alt="drawing" width="400"/>
+</p>
+
+::: info NOTE
+Only variables that have been declared can be used in the condition. Make sure you declare all the variables that you are going to need. Any condition inside the diamond must evaluate to either `True` or `False`.
+:::
+
+Now we need to add the logic for both paths of the selection:
+
+**True Path (Right Side):** If `magazineNumber >= 5` is **True**, the customer is buying 5 or more magazines, so they get the discounted price. We need to set `unitPrice = 5`.
+
+**False Path (Left Side):** If `magazineNumber >= 5` is **False**, the customer is buying fewer than 5 magazines, so they pay the regular price. We need to set `unitPrice = 7`.
+
+Click on the **True** arrow (right side) and add an `Assign` shape. Set the assignment to `unitPrice = 5`.
+
+Click on the **False** arrow (left side) and add an `Assign` shape. Set the assignment to `unitPrice = 7`.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-22.png" alt="drawing" width="400"/>
+</p>
+
+After both paths, the flowchart merges back together (note the circle connector in the image), and you can continue with calculating the total price by multiplying `unitPrice` with `magazineNumber`.
+
+After the selection structure, we need to complete the flowchart. First, declare a new variable called `finalPrice` using the `Declare` shape to store the calculated total cost.
+
+Next, add an `Assign` shape to calculate the final price using the formula `finalPrice = magazineNumber * unitPrice`. This multiplies the number of magazines by the unit price we determined from the selection.
+
+Finally, add an `Output` shape to display `finalPrice` to the user.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-23.png" alt="drawing" width="400"/>
+</p>
+
+The complete flowchart shows how the selection structure works:
+- The diamond shape evaluates the condition `magazineNumber >= 5`
+- If **True** (right path): `unitPrice = 5`
+- If **False** (left path): `unitPrice = 7`
+- Both paths merge back together at the circle connector
+- Then the final calculation and output steps are executed
+
+## Exporting Flowgorithm to Image
+
+At the top bar, click **Tools > Export to an Image file**.
+
+<p align="center">
+    <img src="/public/labs/lab-01/lab-1-24.png" alt="drawing" width="400"/>
+</p>
+
+After you click it, a popup window will appear. There is no need to change anything, just click **Create** at the bottom right of the window.
+
+It will then ask for the location and the name of the image. Name the image `lab-01-2` and save it in your `lab01` folder. Also export this walkthrough to **Python** and save it as `lab-01-2.py` in the same folder.
+
+For every question in this lab you produce two files: the flowchart exported as a **PNG image** (`.png`), and the flowchart exported as a **Python file** (`.py`). To create the Python file, export the flowchart the same way you learned in [Exporting Flowgorithm to Python](#exporting-flowgorithm-to-python). Save both into your `lab01` folder, using the names given in the question.
+
+## Selection Questions
+
+### Scenario 1 - Electricity Bill <Badge type="warning" text="Question" />
+
+A utility company charges RM0.30 per kWh for the first 100 kWh, RM0.50 per kWh for the next 100 kWh (101–200 kWh), and RM0.75 per kWh for any usage above 200 kWh.
+
+Calculate the total bill when the customer enters their total kWh consumed.
+
+Inputs:
+
+- `kwh` – total kWh consumed
+
+Outputs:
+
+- `totalBill` – the total electricity bill
+
+Save the PNG image as `scenario-1.png` and the Python file as `scenario-1.py` in your `lab01` folder.
+
+### Scenario 2 - Baggage Allowance Logic <Badge type="warning" text="Question" />
+
+A flight ticket includes 15 kg of free baggage. Excess baggage is charged RM4.00 per kg beyond that limit. However, if the passenger brings no baggage, they receive a RM10.00 discount on the total ticket price.
+
+Given the weight of baggage and ticket price, calculate the final price.
+
+Inputs:
+
+- `weight` – baggage weight in kg
+
+- `ticketPrice` – ticket price (RM)
+
+Outputs:
+
+- `finalPrice` – the final price to pay
+
+Save the PNG image as `scenario-2.png` and the Python file as `scenario-2.py` in your `lab01` folder.
 
 ## Finishing Up
 
 Before you leave, make sure your `lab01` folder contains:
 
-- `lab-01-1.fprg` and `lab-01-1.py` from the walkthrough, and
-- `exercise-1` to `exercise-8`, each as a `.fprg` **and** a `.py` file.
+- `lab-01-1.fprg` and `lab-01-1.py` from the sequence walkthrough,
+- `lab-01-2.png` and `lab-01-2.py` from the selection walkthrough, and
+- `scenario-1` and `scenario-2`, each as a `.png` **and** a `.py` file.
 
 Show your completed work to your lecturer.

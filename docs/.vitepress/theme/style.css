@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --vp-font-family-base: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Make **bold** text in content render heavier than the default 700. */
+.vp-doc strong {
+    font-weight: 800;
+}
+
+.VPHero .image-bg {
+    display: none !important;
+}
+
+.VPHero .image-container {
+    background: transparent !important;
+}
+
+.open-pdf-btn {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--vp-c-brand-1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.open-pdf-btn:hover {
+    background-color: var(--vp-c-brand-2);
+}
+
+/* Left-align the nav bar menu (next to the search box) instead of the right. */
+.VPNavBar .content-body {
+    justify-content: flex-start;
+}
+
+.VPNavBar .content-body .VPNavBarSearch {
+    flex-grow: 0;
+}
+
+.VPNavBar .content-body .VPNavBarMenu {
+    margin-left: 16px;
+}
+
+/* Keep the right-side controls (theme toggle, "...", mobile menu) on the right. */
+.VPNavBar .content-body .VPNavBarAppearance,
+.VPNavBar .content-body .VPNavBarExtra,
+.VPNavBar .content-body .VPNavBarHamburger {
+    margin-left: auto;
+}

@@ -1,0 +1,7 @@
+# Misc
+.DS_Store
+
+# VitePress build and cache files
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+node_modules/

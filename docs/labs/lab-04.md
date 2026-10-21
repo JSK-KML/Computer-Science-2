@@ -31,7 +31,7 @@ A list is a collection of items stored in a single variable. It allows the stora
 
 A list is written using **square brackets** `[ ]`. The values inside are called **elements**, and they are separated by commas.
 
-Run it. What does it print? <Badge type="warning" text="Run the below code" />
+Run it. What does it print? <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -57,7 +57,7 @@ Any data type can be stored in a list.
 
 **Integers.**
 
-Run it and confirm the list prints back the way you wrote it. <Badge type="warning" text="Run the below code" />
+Run it and confirm the list prints back the way you wrote it. <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [10, 20, 30, 40, 50]
@@ -66,7 +66,7 @@ print(numbers)
 
 **Floats.**
 
-Run it and confirm the list prints back the way you wrote it. <Badge type="warning" text="Run the below code" />
+Run it and confirm the list prints back the way you wrote it. <Badge type="run" text="Run the below code" />
 
 ```python
 decimal_numbers = [1.5, 2.3, 3.7, 4.1]
@@ -75,7 +75,7 @@ print(decimal_numbers)
 
 **Strings.**
 
-Run it and confirm the list prints back the way you wrote it. <Badge type="warning" text="Run the below code" />
+Run it and confirm the list prints back the way you wrote it. <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "cherry", "date"]
@@ -84,7 +84,7 @@ print(fruits)
 
 **Booleans.**
 
-Run it and confirm the list prints back the way you wrote it. <Badge type="warning" text="Run the below code" />
+Run it and confirm the list prints back the way you wrote it. <Badge type="run" text="Run the below code" />
 
 ```python
 status = [True, False, True, False]
@@ -93,7 +93,7 @@ print(status)
 
 **Mixed data types**: a single list can hold values of different types at the same time.
 
-Run it and notice all four types sit together in one list. <Badge type="warning" text="Run the below code" />
+Run it and notice all four types sit together in one list. <Badge type="run" text="Run the below code" />
 
 ```python
 mixed_list = [25, "hello", 3.14, True]
@@ -102,7 +102,7 @@ print(mixed_list)
 
 A list can also be created **empty**, ready to be filled later.
 
-Run it. What does an empty list look like when printed? <Badge type="warning" text="Run the below code" />
+Run it. What does an empty list look like when printed? <Badge type="run" text="Run the below code" />
 
 ```python
 cart = []
@@ -138,7 +138,7 @@ Each element in a list has a position, called its **index**.
 
 Indexing starts at **0**, not 1. The first element is at index `0`, the second at index `1`, and so on, counting from left to right.
 
-Run it. Which two fruits print, and why not the middle one? <Badge type="warning" text="Run the below code" />
+Run it. Which two fruits print, and why not the middle one? <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -152,7 +152,7 @@ print(fruits[2])
 
 Because indexing starts at `0`, the last element of this three-element list is at index `2`, not `3`. Using an index that does not exist produces an error.
 
-Run it. Instead of a fruit, **Python** stops with an error, read the message it gives. <Badge type="warning" text="Run the below code" />
+Run it. Instead of a fruit, **Python** stops with an error, read the message it gives. <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -165,7 +165,7 @@ The error tells you the index does not exist in the list.
 
 Elements can also be accessed from the **end** of the list using negative indexes. The last element is at index `-1`, the second-to-last at `-2`, counting from right to left.
 
-Run it. Which two cities print? Count from the right to check the negative indexes match. <Badge type="warning" text="Run the below code" />
+Run it. Which two cities print? Count from the right to check the negative indexes match. <Badge type="run" text="Run the below code" />
 
 ```python
 cities = ["Kuala Lumpur", "Tokyo", "New York", "Paris", "Dubai"]
@@ -211,7 +211,7 @@ Reaching one element at a time with an index works, but most of the time you wan
 
 To visit every element, loop over the positions. Combine `range()` and `len()`, then use the index to reach each element with `fruits[i]`.
 
-Run it. Each line should now show an index next to its fruit. <Badge type="warning" text="Run the below code" />
+Run it. Each line should now show an index next to its fruit. <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -223,7 +223,7 @@ for i in range(len(fruits)):
 
 This adds up every number in a list.
 
-Run it, then add the four numbers by hand and check the printed total matches. <Badge type="warning" text="Run the below code" />
+Run it, then add the four numbers by hand and check the printed total matches. <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [10, 20, 30, 40]
@@ -237,7 +237,7 @@ Each pass takes the next number and adds it to `total`, so after the loop `total
 
 Because you know each element's position, you can also decide what to do based on the position itself, for example, printing only the elements at **even index positions** (`0`, `2`, `4`, ...).
 
-Run it. Which names are skipped, and why? <Badge type="warning" text="Run the below code" />
+Run it. Which names are skipped, and why? <Badge type="run" text="Run the below code" />
 
 ```python
 names = ["Ali", "Sara", "Kumar", "Lee", "Wong"]
@@ -250,7 +250,7 @@ Only the names at even index positions print.
 
 The index also lets you compare an element with its **neighbour**, the element just before it, at index `i - 1`. This example prints a message whenever a temperature is higher than the day before it.
 
-Run it, then compare each temperature with the one before it to check the days it reports. <Badge type="warning" text="Run the below code" />
+Run it, then compare each temperature with the one before it to check the days it reports. <Badge type="run" text="Run the below code" />
 
 ```python
 temps = [25, 27, 26, 30]
@@ -265,7 +265,7 @@ The check `i > 0` is important: the very first element (index `0`) has no elemen
 
 A `while` loop keeps its own counter and repeats as long as a condition is true. To visit a list, the counter starts at `0` and increases each pass, stopping when it reaches the length of the list.
 
-Run it. It should print the same three fruits as the `for` loop did. <Badge type="warning" text="Run the below code" />
+Run it. It should print the same three fruits as the `for` loop did. <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -277,7 +277,7 @@ while i < len(fruits):
 
 For simply walking through a whole list, a `while` loop offers no advantage over the `for` loop above. Its usefulness is the **flexibility of its condition**: you control exactly when it stops, so it can end early. For example, this stops as soon as it finds a number above `100`.
 
-Run it. How many numbers print, and why does it stop before the end of the list? <Badge type="warning" text="Run the below code" />
+Run it. How many numbers print, and why does it stop before the end of the list? <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [20, 45, 130, 60, 200]
@@ -350,7 +350,7 @@ temperatures = [36.5, 37.2, 36.8, 37.0]
 
 A list is **mutable**: its elements can be changed after it is created. To change an element, assign a new value to it through its index.
 
-Run it, then compare the two printed lines: which element changed, and which stayed the same? <Badge type="warning" text="Run the below code" />
+Run it, then compare the two printed lines: which element changed, and which stayed the same? <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "kiwi"]
@@ -362,7 +362,7 @@ print(fruits)
 
 Updating also works with negative indexes.
 
-Run it. Which two cities were replaced? Count from the right to confirm `-1` and `-3` landed where you expected. <Badge type="warning" text="Run the below code" />
+Run it. Which two cities were replaced? Count from the right to confirm `-1` and `-3` landed where you expected. <Badge type="run" text="Run the below code" />
 
 ```python
 cities = ["KL", "Penang", "JB", "Malacca"]
@@ -405,7 +405,7 @@ Updated marks: [55, 0, 72, 41, 0, 90]
 
 `len()` returns the number of elements in a list.
 
-Run it. Does the reported length match the number of cars you can count in the list? <Badge type="warning" text="Run the below code" />
+Run it. Does the reported length match the number of cars you can count in the list? <Badge type="run" text="Run the below code" />
 
 ```python
 carlist = ["Saga", "Waja", "Wira", "Persona"]
@@ -416,7 +416,7 @@ print("Length of the list:", len(carlist))
 
 `min()` returns the smallest element and `max()` returns the largest.
 
-Run it. Do the smallest and largest values reported match what you see in the list? <Badge type="warning" text="Run the below code" />
+Run it. Do the smallest and largest values reported match what you see in the list? <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [5, 2, 8, 1, 6]
@@ -426,7 +426,7 @@ print("Maximum value:", max(numbers))
 
 With strings, `min()` and `max()` compare alphabetically. `min()` returns the word first in alphabetical order, `max()` the word last.
 
-Run it and check the minimum and maximum words against alphabetical order. <Badge type="warning" text="Run the below code" />
+Run it and check the minimum and maximum words against alphabetical order. <Badge type="run" text="Run the below code" />
 
 ```python
 string_list = ["apple", "banana", "cherry", "date"]
@@ -436,7 +436,7 @@ print("Maximum string:", max(string_list))
 
 These functions require the elements to be of a comparable type. A list that mixes numbers and text causes an error.
 
-Run it. **Python** stops with an error instead of a result, read what the message says. <Badge type="warning" text="Run the below code" />
+Run it. **Python** stops with an error instead of a result, read what the message says. <Badge type="run" text="Run the below code" />
 
 ```python
 list1 = ['a', 'b', 'c', 50]
@@ -453,7 +453,7 @@ The message explains that it cannot compare a number against text.
 
 `sum()` adds up all the numeric values in a list and returns the total.
 
-Run it, then add the five numbers by hand and check the total matches. <Badge type="warning" text="Run the below code" />
+Run it, then add the five numbers by hand and check the total matches. <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -498,20 +498,71 @@ Failed: 1
 
 ### Function vs Method
 
-Everything in this section so far has been a **function**. The next two sections use **methods** instead. The two are written differently:
+So far in this section you have used **functions**. The next two sections use **methods**.
 
-| | How it is written | Where the list goes | Example |
+A **method** is a function that **belongs to an object**. In **Python**, the values you store in variables are **objects**: the list `marks` is an object, and so is the string `"Aina"`. Each type of object comes with its own methods. A list object comes with `append()` and `sort()`.
+
+- **Function:** not attached to any object. You pass the data **inside the brackets**, for example `len(marks)`.
+- **Method:** attached to an object. You write the **object**, a **dot**, then the method, and the method works on that object, for example `marks.append(60)`.
+
+```python
+marks = [80, 70, 90]
+
+print(len(marks))   # function: marks goes inside the brackets
+marks.append(60)    # method: marks comes before the dot
+```
+
+#### Not Every Dot Means a Method
+
+`math.sqrt(25)` also has a dot, but it is a **function**. What matters is **what comes before the dot**:
+
+| Code | Before the dot | Type | The data it works on |
 |---|---|---|---|
-| **Function** | `name(list)` | inside the brackets | `len(carlist)` |
-| **Method** | `list.name()` | before the dot | `carlist.append(...)` |
+| `len(marks)` | nothing | Function | `marks`, inside the brackets |
+| `math.sqrt(25)` | `math`, a **module** | Function | `25`, inside the brackets |
+| `marks.append(60)` | `marks`, a list **object** | Method | `marks` itself, the object before the dot |
 
-A function wraps the list; a method hangs off the list after a dot.
+`math` is a **module**, only the place where `sqrt()` is kept, so the data still goes inside the brackets. `marks` is an **object**, and `append()` belongs to it, so it works on `marks` directly.
+
+::: tip RULE
+- Before the dot is a **module** → it is a **function**.
+- Before the dot is an **object**, such as a list → it is a **method**, and it works on that object.
+:::
+
+Use `type()` to check what comes before the dot. Run it. <Badge type="run" text="Run the below code" />
+
+```python
+import math
+marks = [80, 70, 90]
+print(type(math))
+print(type(marks))
+```
+
+**Output:**
+
+```
+<class 'module'>
+<class 'list'>
+```
+
+Because a method belongs to its type of object, it only works on that type. `append()` belongs to list objects, so a string object cannot use it. Run it. <Badge type="run" text="Run the below code" />
+
+```python
+name = "Aina"
+name.append("!")
+```
+
+**Output:**
+
+```
+AttributeError: 'str' object has no attribute 'append'
+```
 
 ## The append() Method
 
 The `append()` method adds a single element to the **end** of a list. It modifies the list in place.
 
-Run it. Where in the list does `"orange"` appear, at the start or the end? <Badge type="warning" text="Run the below code" />
+Run it. Where in the list does `"orange"` appear, at the start or the end? <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["apple", "banana", "cherry"]
@@ -521,7 +572,7 @@ print(fruits)
 
 This is useful together with an empty list: a list can be built up one element at a time, often inside a loop.
 
-Run it. The list starts empty and ends up filled. What values does it hold, and how many? <Badge type="warning" text="Run the below code" />
+Run it. The list starts empty and ends up filled. What values does it hold, and how many? <Badge type="run" text="Run the below code" />
 
 ```python
 number_list = []
@@ -532,7 +583,7 @@ print(number_list)
 
 An element can also be appended only when it meets a condition.
 
-Run it. Which numbers `0` to `9` end up in the list, and why were the rest left out? <Badge type="warning" text="Run the below code" />
+Run it. Which numbers `0` to `9` end up in the list, and why were the rest left out? <Badge type="run" text="Run the below code" />
 
 ```python
 even_numbers = []
@@ -588,7 +639,7 @@ Rejected: 3
 
 The `sort()` method rearranges the elements of a list into order. By default it sorts in **ascending** order, from smallest to largest.
 
-Run it. In what order do the numbers come out, smallest first or largest first? <Badge type="warning" text="Run the below code" />
+Run it. In what order do the numbers come out, smallest first or largest first? <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [5, 2, 9, 1, 5, 6]
@@ -598,7 +649,7 @@ print(numbers)
 
 Passing `reverse=True` sorts in **descending** order, from largest to smallest.
 
-Run it. How is the order different from the previous run without `reverse=True`? <Badge type="warning" text="Run the below code" />
+Run it. How is the order different from the previous run without `reverse=True`? <Badge type="run" text="Run the below code" />
 
 ```python
 numbers = [5, 2, 9, 1, 5, 6]
@@ -608,7 +659,7 @@ print(numbers)
 
 `sort()` also orders strings alphabetically.
 
-Run it, then compare the two printed lines, one is alphabetical, the other its reverse. <Badge type="warning" text="Run the below code" />
+Run it, then compare the two printed lines, one is alphabetical, the other its reverse. <Badge type="run" text="Run the below code" />
 
 ```python
 fruits = ["banana", "apple", "cherry", "date"]
@@ -618,6 +669,45 @@ print(fruits)
 fruits.sort(reverse=True)
 print(fruits)
 ```
+
+### append() and sort() Return Nothing
+
+`append()` and `sort()` **change the list itself**. They do not give back a new list. Like a function with no `return`, they give back `None`. Storing their result is a common mistake. Run it. <Badge type="run" text="Run the below code" />
+
+```python{2,6}
+marks = [80, 70, 90]
+result = marks.append(60)
+print(result)
+print(marks)
+
+sorted_marks = marks.sort()
+print(sorted_marks)
+print(marks)
+```
+
+**Output:**
+
+```
+None
+[80, 70, 90, 60]
+None
+[60, 70, 80, 90]
+```
+
+There is no error, but `result` and `sorted_marks` hold `None`. The work was done on `marks` itself. Writing `marks = marks.sort()` is worse: it replaces your whole list with `None`.
+
+**Correct:** call the method on its own line, then use the list.
+
+```python
+marks = [80, 70, 90]
+marks.append(60)
+marks.sort()
+print(marks)
+```
+
+::: info NOTE
+This is **not** true for every method. Some list methods do give back a value. For example, `marks.count(80)` returns how many times `80` appears. These methods are not covered in this course. For `append()` and `sort()`, remember: they change the list and return `None`.
+:::
 
 ### Exercises: Basic <Badge type="warning" text="Task" />
 

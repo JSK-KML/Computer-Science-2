@@ -40,7 +40,7 @@ range(start, stop, step)
 
 ### range(stop)
 
-With one number, the count starts at `0` and goes up by `1`. <Badge type="warning" text="Run the below code" />
+With one number, the count starts at `0` and goes up by `1`. <Badge type="run" text="Run the below code" />
 
 ```python
 for count in range(4):
@@ -51,7 +51,7 @@ for count in range(4):
 
 ### range(start, stop)
 
-With two numbers, you choose where to start. <Badge type="warning" text="Run the below code" />
+With two numbers, you choose where to start. <Badge type="run" text="Run the below code" />
 
 ```python
 for number in range(1, 6):
@@ -62,7 +62,7 @@ for number in range(1, 6):
 
 ### range(start, stop, step)
 
-With three numbers, you also choose how much to jump each time. <Badge type="warning" text="Run the below code" />
+With three numbers, you also choose how much to jump each time. <Badge type="run" text="Run the below code" />
 
 ```python
 for number in range(1, 10, 2):
@@ -81,14 +81,14 @@ for number in range(1, 10, 2):
 
 ### Negative Step: Counting Down
 
-When `step` is **negative**, the loop counts **down** instead of up. `start` must now be **bigger** than `stop`, and the loop stops **before** reaching `stop`, just like before. <Badge type="warning" text="Run the below code" />
+When `step` is **negative**, the loop counts **down** instead of up. `start` must now be **bigger** than `stop`, and the loop stops **before** reaching `stop`, just like before. <Badge type="run" text="Run the below code" />
 
 ```python
 for number in range(5, 0, -1):
     print(number)
 ```
 
-**Output:** `5 4 3 2 1`. It starts at `5`, subtracts `1` each time, and stops before `0`, so `0` is not printed. <Badge type="warning" text="Run the below code" />
+**Output:** `5 4 3 2 1`. It starts at `5`, subtracts `1` each time, and stops before `0`, so `0` is not printed. <Badge type="run" text="Run the below code" />
 
 ```python
 for number in range(10, 0, -2):
@@ -97,7 +97,7 @@ for number in range(10, 0, -2):
 
 **Output:** `10 8 6 4 2`. It subtracts `2` each time and stops before `0`.
 
-If the direction is wrong, the loop runs **zero** times and prints nothing. <Badge type="warning" text="Run the below code" />
+If the direction is wrong, the loop runs **zero** times and prints nothing. <Badge type="run" text="Run the below code" />
 
 ```python
 for number in range(1, 5, -1):
@@ -114,7 +114,7 @@ Starting at `1` and counting **down** can never get closer to `5`, so there is n
 
 ### Number of Repetitions from the User
 
-The number of repetitions can come from the user. <Badge type="warning" text="Run the below code" />
+The number of repetitions can come from the user. <Badge type="run" text="Run the below code" />
 
 ```python
 times = int(input("How many times? "))
@@ -132,7 +132,7 @@ A counter-controlled loop can also be written with `while`. With `for`, `range()
 | 2. **Condition** | Checks whether the loop should continue | In the `while` line |
 | 3. **Update counter** | Changes the counter each time | At the **end** of the loop body |
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 count = 1                 # 1. initial counter
@@ -152,7 +152,7 @@ The three components match the three parts of `range()`:
 | `stop` = `6` | Condition: `count <= 5` (or `count < 6`) |
 | `step` = `1` | Update counter: `count = count + 1` |
 
-Counting down works the same way, with a negative update. <Badge type="warning" text="Run the below code" />
+Counting down works the same way, with a negative update. <Badge type="run" text="Run the below code" />
 
 ```python
 count = 5                 # 1. initial counter
@@ -235,7 +235,7 @@ while count >= 1:
 
 ## Counter and Accumulator
 
-An **accumulator** is a variable that builds up a total inside the loop. Give it a starting value **before** the loop. <Badge type="warning" text="Run the below code" />
+An **accumulator** is a variable that builds up a total inside the loop. Give it a starting value **before** the loop. <Badge type="run" text="Run the below code" />
 
 ```python
 total = 0
@@ -267,7 +267,7 @@ A sentinel-controlled loop also has **three components**. They match the counter
 | 2. **Condition** | Checks whether the value is the sentinel | In the `while` line |
 | 3. **Update input** | Reads the next value, so the loop can stop | At the **end** of the loop body |
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 total = 0

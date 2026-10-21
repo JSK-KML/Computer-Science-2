@@ -66,3 +66,10 @@
     line-height: 1;
     user-select: none;
 }
+
+/* Green badge for "Run the below code" */
+.VPBadge.run {
+    border-color: transparent;
+    color: var(--vp-c-green-1);
+    background-color: var(--vp-c-green-soft);
+}

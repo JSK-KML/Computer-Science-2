@@ -57,7 +57,7 @@ The `=` sign stores the value on the right into the variable on the left. **Pyth
 
 Use **meaningful** names in **snake_case**: lowercase words joined with an underscore. `total_marks` tells you what the value is, `tm` or `x` does not.
 
-Type this in and run it. <Badge type="warning" text="Run the below code" />
+Type this in and run it. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 25
@@ -68,7 +68,7 @@ print(Age)
 
 The output is `25` then `30`. **Python** treats `age` and `Age` as two separate variables.
 
-A variable can be **reassigned**. The new value replaces the old one. <Badge type="warning" text="Run the below code" />
+A variable can be **reassigned**. The new value replaces the old one. <Badge type="run" text="Run the below code" />
 
 ```python
 score = 70
@@ -80,7 +80,7 @@ The output is `85`.
 
 ### Reserved Words
 
-A **reserved word** (keyword) has a special meaning in **Python**, such as `if`, `else`, `elif`, `for`, `while`, `import`, `True`, `False` and `None`. You cannot use them as names. Try it. <Badge type="warning" text="Run the below code" />
+A **reserved word** (keyword) has a special meaning in **Python**, such as `if`, `else`, `elif`, `for`, `while`, `import`, `True`, `False` and `None`. You cannot use them as names. Try it. <Badge type="run" text="Run the below code" />
 
 ```python
 class = 10
@@ -103,7 +103,7 @@ Keywords are case-sensitive too. `True` is a keyword, but `true` is not, so writ
 
 A **list** stores several values in one variable using square brackets. For now you only need to recognise it. Lists are covered in Topic 6.
 
-Use `type()` to check the data type of a variable or a value. <Badge type="warning" text="Run the below code" />
+Use `type()` to check the data type of a variable or a value. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 18
@@ -122,7 +122,7 @@ print(type(True))
 <class 'bool'>
 ```
 
-Now predict the answer before you run this. <Badge type="warning" text="Run the below code" />
+Now predict the answer before you run this. <Badge type="run" text="Run the below code" />
 
 ```python
 print(type(25))
@@ -133,7 +133,7 @@ The first is `int`, the second is `str`. The quotation marks make `"25"` a piece
 
 ### Strings: len() and Concatenation
 
-`len()` counts the characters in a string. Spaces and symbols count too. <Badge type="warning" text="Run the below code" />
+`len()` counts the characters in a string. Spaces and symbols count too. <Badge type="run" text="Run the below code" />
 
 ```python
 name = "Aina Ali"
@@ -142,7 +142,7 @@ print(len(name))
 
 The output is `8`, because the space is counted.
 
-**Concatenation** joins strings with `+`. <Badge type="warning" text="Run the below code" />
+**Concatenation** joins strings with `+`. <Badge type="run" text="Run the below code" />
 
 ```python
 first_name = "Aina"
@@ -154,7 +154,7 @@ The output is `Aina Ali`. Without the `" "` in the middle you would get `AinaAli
 
 ### Output Statements
 
-`print()` displays information on the screen. <Badge type="warning" text="Run the below code" />
+`print()` displays information on the screen. <Badge type="run" text="Run the below code" />
 
 ```python
 student_name = "Aina"
@@ -168,7 +168,7 @@ print("Name:", student_name, "Mark:", mark)
 
 Use commas to display several items in one `print()`. **Python** puts a space between each item automatically.
 
-Do not put quotation marks around a variable name. Compare the two lines. <Badge type="warning" text="Run the below code" />
+Do not put quotation marks around a variable name. Compare the two lines. <Badge type="run" text="Run the below code" />
 
 ```python
 student_name = "Aina"
@@ -180,14 +180,14 @@ The first line prints the text `student_name`. The second prints the value `Aina
 
 ### Input Statements
 
-`input()` waits for the user to type something and returns it. Store it in a variable, and use a prompt message so the user knows what to enter. <Badge type="warning" text="Run the below code" />
+`input()` waits for the user to type something and returns it. Store it in a variable, and use a prompt message so the user knows what to enter. <Badge type="run" text="Run the below code" />
 
 ```python
 name = input("Enter your name: ")
 print("Hello", name)
 ```
 
-`input()` **always** returns a string, even if the user types a number. Try this and enter `5`, then `3`. <Badge type="warning" text="Run the below code" />
+`input()` **always** returns a string, even if the user types a number. Try this and enter `5`, then `3`. <Badge type="run" text="Run the below code" />
 
 ```python
 first = input("First number: ")
@@ -209,7 +209,7 @@ The result is `53`, not `8`, and the type is `str`. `"5" + "3"` joins two pieces
 | `str()` | string | `str(100)` | `"100"` |
 | `bool()` | Boolean | `bool(1)` | `True` |
 
-Fix the previous program by casting each input as you read it. <Badge type="warning" text="Run the below code" />
+Fix the previous program by casting each input as you read it. <Badge type="run" text="Run the below code" />
 
 ```python
 first = int(input("First number: "))
@@ -227,7 +227,7 @@ Run it again with `5` and `3`, and this time you get `8`.
 
 ### Import Statements
 
-The `import` statement brings in a **module** so you can use its functions. The `math` module provides `math.pi`, `math.pow()` and `math.sqrt()`. <Badge type="warning" text="Run the below code" />
+The `import` statement brings in a **module** so you can use its functions. The `math` module provides `math.pi`, `math.pow()` and `math.sqrt()`. <Badge type="run" text="Run the below code" />
 
 ```python
 import math
@@ -247,7 +247,7 @@ print("Square root of 64 is", square_root)
 
 ### Comments
 
-A **comment** explains the code and is ignored when the program runs. <Badge type="warning" text="Run the below code" />
+A **comment** explains the code and is ignored when the program runs. <Badge type="run" text="Run the below code" />
 
 ```python
 # This program calculates the area of a rectangle
@@ -267,7 +267,7 @@ It uses triple quotes.
 
 ### Indentation
 
-**Python** uses indentation (spaces at the start of a line) to group statements into a block, such as the statements inside an `if`. Try this. <Badge type="warning" text="Run the below code" />
+**Python** uses indentation (spaces at the start of a line) to group statements into a block, such as the statements inside an `if`. Try this. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 18
@@ -275,7 +275,7 @@ if age >= 18:
 print("You are allowed to vote")
 ```
 
-It fails with `IndentationError: expected an indented block`. The `print()` belongs to the `if`, so it must be indented. Fix it. <Badge type="warning" text="Run the below code" />
+It fails with `IndentationError: expected an indented block`. The `print()` belongs to the `if`, so it must be indented. Fix it. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 18
@@ -320,7 +320,7 @@ An **expression** is a combination of values, variables and operators that produ
 
 ### Assignment Operator
 
-The assignment operator `=` stores a value in a variable. **Python** works out the right side first, then stores the result. <Badge type="warning" text="Run the below code" />
+The assignment operator `=` stores a value in a variable. **Python** works out the right side first, then stores the result. <Badge type="run" text="Run the below code" />
 
 ```python
 total = 3 + 4 * 2
@@ -329,7 +329,7 @@ print(total)
 
 `4 * 2` gives `8`, then `3 + 8` gives `11`, then `11` is stored in `total`.
 
-You can also assign several variables in one line. <Badge type="warning" text="Run the below code" />
+You can also assign several variables in one line. <Badge type="run" text="Run the below code" />
 
 ```python
 a = b = c = 0
@@ -340,7 +340,7 @@ print(x, y, z)
 
 **Output:** `0 0 0` and `1 2 3`.
 
-**`=` is not the same as `==`.** One `=` **stores** a value. Two `==` **compares** two values and gives `True` or `False`. <Badge type="warning" text="Run the below code" />
+**`=` is not the same as `==`.** One `=` **stores** a value. Two `==` **compares** two values and gives `True` or `False`. <Badge type="run" text="Run the below code" />
 
 ```python
 floor = 13          # store 13 in floor
@@ -367,7 +367,7 @@ print(floor == 10)  # compare: False
 | `%` | Remainder (modulus) | `5 % 2` | `1` |
 | `**` | Exponentiation | `5 ** 2` | `25` |
 
-Try each one. <Badge type="warning" text="Run the below code" />
+Try each one. <Badge type="run" text="Run the below code" />
 
 ```python
 print(7 / 2)
@@ -382,7 +382,7 @@ print(2 ** 3)
 - `%` gives the remainder: 7 divided by 2 is 3, remainder **1**.
 - Use `**` for power. `2 ^ 3` is **not** a power in **Python**.
 
-If an expression mixes `int` and `float`, the result is a `float`. <Badge type="warning" text="Run the below code" />
+If an expression mixes `int` and `float`, the result is a `float`. <Badge type="run" text="Run the below code" />
 
 ```python
 a = 5
@@ -395,7 +395,7 @@ print(a * b)
 
 ### Strings and Arithmetic Operators
 
-Strings do not support normal arithmetic. `+` joins strings and `*` repeats a string. <Badge type="warning" text="Run the below code" />
+Strings do not support normal arithmetic. `+` joins strings and `*` repeats a string. <Badge type="run" text="Run the below code" />
 
 ```python
 print("Hi" + "Mira")
@@ -418,7 +418,7 @@ Relational operators compare two values and give `True` or `False`.
 | `>=` | Greater than or equal to | `5 >= 5` | `True` |
 | `<=` | Less than or equal to | `4 <= 3` | `False` |
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 mark = 75
@@ -439,7 +439,7 @@ Logical operators combine conditions.
 | `or` | `True` if at least one is true | `(5 > 3) or (3 > 7)` | `True` |
 | `not` | Reverses the result | `not (5 > 3)` | `False` |
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 20
@@ -479,7 +479,7 @@ When an expression mixes different operators, **Python** works them out in this 
 | 7 | Logical | `and` |
 | 8 (lowest) | Logical | `or` |
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 print(10 + 3 * 2)
@@ -491,7 +491,7 @@ print(2 ** 3 ** 2)
 
 The last one is worked out **right to left**: `3 ** 2` is `9` first, then `2 ** 9` is `512`.
 
-Arithmetic comes before relational, and relational comes before logical. <Badge type="warning" text="Run the below code" />
+Arithmetic comes before relational, and relational comes before logical. <Badge type="run" text="Run the below code" />
 
 ```python
 print(5 + 3 > 7 and not False)
@@ -541,7 +541,7 @@ A **programming error** is any mistake that stops a program from running correct
 
 ### Syntax Errors
 
-A **syntax error** breaks the grammar rules of **Python**. Run each one, read the error, then fix it. <Badge type="warning" text="Run the below code" />
+A **syntax error** breaks the grammar rules of **Python**. Run each one, read the error, then fix it. <Badge type="run" text="Run the below code" />
 
 ```python
 print("Hello, World)
@@ -561,7 +561,7 @@ The first is missing a closing quotation mark, the second is missing brackets, a
 
 ### Run-time Errors
 
-A **run-time error** happens while the program is running, even though the syntax is correct. <Badge type="warning" text="Run the below code" />
+A **run-time error** happens while the program is running, even though the syntax is correct. <Badge type="run" text="Run the below code" />
 
 ```python
 print(10 / 0)
@@ -585,7 +585,7 @@ print(age + 5)
 
 ### Logic Errors
 
-A **logic error** gives no error message at all. The program runs, but the result is wrong. You only find it by checking the output. <Badge type="warning" text="Run the below code" />
+A **logic error** gives no error message at all. The program runs, but the result is wrong. You only find it by checking the output. <Badge type="run" text="Run the below code" />
 
 ```python
 mark1 = 80
@@ -595,7 +595,7 @@ average = mark1 + mark2 + mark3 / 3
 print("Average:", average)
 ```
 
-This prints `180.0`, but the correct average is `80.0`. The brackets are missing, so only `mark3` is divided by 3. <Badge type="warning" text="Run the below code" />
+This prints `180.0`, but the correct average is `80.0`. The brackets are missing, so only `mark3` is divided by 3. <Badge type="run" text="Run the below code" />
 
 ```python
 age = 16
@@ -639,7 +639,7 @@ Selection lets your program choose what to do based on a condition, just like th
 
 ### Single Selection: if
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 mark = 75
@@ -651,7 +651,7 @@ The indented line only runs when the condition is `True`. Change `mark` to `40` 
 
 ### Dual Selection: if...else
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 mark = 40
@@ -663,7 +663,7 @@ else:
 
 `else` runs when the condition is `False`.
 
-Here is the MyHealth magazine flowchart from Lab 1 written in **Python**. <Badge type="warning" text="Run the below code" />
+Here is the MyHealth magazine flowchart from Lab 1 written in **Python**. <Badge type="run" text="Run the below code" />
 
 ```python
 magazine_number = int(input("Enter number of magazines: "))
@@ -681,7 +681,7 @@ Compare it with your flowchart. The diamond became `if`, the **True** path becam
 
 ### Multiple Selection: if...elif...else
 
-Use `elif` when there are more than two choices. <Badge type="warning" text="Run the below code" />
+Use `elif` when there are more than two choices. <Badge type="run" text="Run the below code" />
 
 ```python
 mark = int(input("Enter mark: "))
@@ -700,7 +700,7 @@ else:
 
 ### Conditions with Logical Operators
 
-Run it. <Badge type="warning" text="Run the below code" />
+Run it. <Badge type="run" text="Run the below code" />
 
 ```python
 age = int(input("Enter age: "))

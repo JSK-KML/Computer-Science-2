@@ -14,6 +14,9 @@ export default defineConfig({
   title: "CS125 Computer Science 2",
   description: "Course, Lectures and Labs Informations",
   base: '/Computer-Science-2/',
+  markdown: {
+    lineNumbers: true
+  },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/Computer-Science-2/favicon.svg' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/Computer-Science-2/favicon.png' }],

@@ -26,10 +26,8 @@ export default defineConfig({
       {
         text: 'Course Information',
         items: [
-          { text: 'Course Overview', link: '/course/course' },
           { text: 'Topics', link: '/course/topics' },
-          { text: 'Assessments', link: '/course/assessments' },
-          { text: 'Schedule', link: '/course/schedule' }
+          { text: 'Assessments', link: '/course/assessments' }
         ],
         activeMatch: '^/course/'
       },
@@ -56,10 +54,8 @@ export default defineConfig({
         {
           text: 'Course Information',
           items: [
-            { text: 'Course Overview', link: '/course/course' },
             { text: 'Topics', link: '/course/topics' },
-            { text: 'Assessments', link: '/course/assessments' },
-            { text: 'Schedule', link: '/course/schedule' }
+            { text: 'Assessments', link: '/course/assessments' }
           ]
         }
       ],

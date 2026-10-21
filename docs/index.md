@@ -13,7 +13,7 @@ hero:
       link: /labs/lab-01
     - theme: alt
       text: Course Information
-      link: /course/course
+      link: /course/topics
 
 features:
   - title: Course Information

@@ -5,6 +5,8 @@ title : Lab 5 - Functions
 
 # Lab 05 : Functions
 
+## Overview
+
 A **function** is a named block of code that does one job. You write it once and run it whenever you need it by **calling** its name.
 
 Functions give four advantages:
@@ -14,7 +16,19 @@ Functions give four advantages:
 - **Readability** – a good function name tells you what the code does.
 - **Easier debugging** – if the answer is wrong, you only fix one place.
 
-## Before You Begin
+### Learning Outcomes
+
+- **7.1** Explain the concept and advantages of functions in Python programming.
+- **7.2** Explain the differences between pre-defined functions and user-defined functions.
+- **7.3** Identify the use of common pre-defined Python functions such as print(), len(), input(), pow() and sqrt().
+- **7.4** Identify the components of a Python user-defined function, including function name, parameters, return statement and function body.
+- **7.5** Apply Python function concepts to write a function definition with or without return values based on a given problem statement.
+- **7.6** Apply Python function concepts to write a function call with or without arguments.
+- **7.7** Apply Python user-defined functions to perform simple computations based on given scenarios.
+- **7.8** Apply functions with or without arguments and return values in function calls.
+- **7.9** Construct a Python program using user-defined functions with control structures.
+
+### Before You Begin
 
 Inside your `yourname-cs125` folder, create a new folder named `lab05`. You will save every file for this lab inside `lab05`.
 
@@ -35,7 +49,7 @@ Create a file named `practice.py` in your `lab05` folder. Throughout this lab, t
 
 `sqrt()` is kept inside the `math` module, so write `import math` at the top of the program before using it.
 
-Try this:
+Try this. <Badge type="warning" text="Run the below code" />
 
 ```python
 import math
@@ -57,7 +71,7 @@ Notice that `len()`, `round()`, `pow()` and `math.sqrt()` all **give back** a va
 
 ### The Problem with Repetition
 
-A restaurant calculates each customer's bill by adding 6% SST and a RM2.00 service charge to the meal price. Without a function, the same formula is repeated for every customer:
+A restaurant calculates each customer's bill by adding 6% SST and a RM2.00 service charge to the meal price. Without a function, the same formula is repeated for every customer. <Badge type="warning" text="Run the below code" />
 
 ```python
 # Customer 1 - Nasi Lemak
@@ -85,7 +99,7 @@ It works, but if SST changes from 6% to 8%, you must change `0.06` in three plac
 
 ### Creating a Function
 
-Write the formula **once** inside a function, then call it for each customer:
+Write the formula **once** inside a function, then call it for each customer. <Badge type="warning" text="Run the below code" />
 
 ```python
 def calculate_bill(meal_price):
@@ -135,6 +149,8 @@ def calculate_bill(meal_price):
 - A **parameter** is the variable inside the brackets of the **definition**.
 - An **argument** is the actual value given when **calling** the function.
 
+Run it. <Badge type="warning" text="Run the below code" />
+
 ```python
 def calculate_area(length, width):   # length and width are PARAMETERS
     area = length * width
@@ -150,7 +166,7 @@ The arguments must match the parameters in **number** and **order**. Here `5` go
 
 ## Types of Functions
 
-A function may or may not take arguments, and may or may not return a value. That gives four combinations:
+A function may or may not take arguments, and may or may not return a value. That gives four combinations. <Badge type="warning" text="Run the below code" />
 
 ```python
 # 1. No arguments, no return value
@@ -188,7 +204,7 @@ Average: 77.5
 
 ## Storing and Using Returned Values
 
-`print()` only **displays** a value. `return` **gives back** a value that you can store in a variable and use again. Try this:
+`print()` only **displays** a value. `return` **gives back** a value that you can store in a variable and use again. Try this. <Badge type="warning" text="Run the below code" />
 
 ```python
 def add_with_print(a, b):
@@ -213,7 +229,7 @@ y contains: 8
 
 `x` is `None` because `add_with_print()` has no `return`. When a function has no `return`, **Python** gives back `None`.
 
-A returned value can be used in further calculations:
+A returned value can be used in further calculations. <Badge type="warning" text="Run the below code" />
 
 ```python
 def celsius_to_fahrenheit(celsius):
@@ -233,7 +249,7 @@ Use `print()` to show a result to the user. Use `return` when the result is need
 
 ## Connecting Multiple Functions
 
-The value returned by one function can be passed as an argument into another function:
+The value returned by one function can be passed as an argument into another function. <Badge type="warning" text="Run the below code" />
 
 ```python
 def calculate_subtotal(price, quantity):
@@ -259,7 +275,7 @@ print("Total:", round(total, 2))
 
 The body of a function can contain an `if-else` or a loop.
 
-**Function with if-else:**
+**Function with if-else:** <Badge type="warning" text="Run the below code" />
 
 ```python
 def check_status(marks):
@@ -274,7 +290,7 @@ print("Status:", check_status(40))
 
 **Expected:** `Status: Pass` and `Status: Fail`
 
-**Function with a loop:**
+**Function with a loop:** <Badge type="warning" text="Run the below code" />
 
 ```python
 def sum_up_to(n):
@@ -288,36 +304,116 @@ print("Sum 1 to 5:", sum_up_to(5))
 
 **Expected:** `Sum 1 to 5: 15`
 
-## Temperature Converter <Badge type="warning" text="Task" />
+## Exercises
 
-Save a new file named `temperature.py` in your `lab05` folder. Write a function `celsius_to_fahrenheit(celsius)` that returns the temperature in Fahrenheit using `celsius * 9 / 5 + 32`. Ask the user for a temperature in Celsius, call the function, and display the result.
+For each exercise, write the functions described, then write the main part of the program that reads the inputs, calls the functions, and displays the result.
 
-**Test:** `30` → **Expected:** `Fahrenheit: 86.0`
+### Exercise 1: Bouncing Ball <Badge type="warning" text="Task" />
 
-## Shop Discount <Badge type="warning" text="Task" />
+Save a new file named `bouncing-ball.py` in your `lab05` folder.
 
-Save a new file named `discount.py` in your `lab05` folder. Write two functions:
+A ball is dropped from a certain height. Each time it hits the ground, it bounces back up to only 80% of its previous height. The ball keeps bouncing until the bounce height is less than 1, at which point it is considered stopped.
 
-- `calculate_discount(price)` returns **10%** of the price if the price is **RM100 or more**, otherwise **5%**.
-- `calculate_final_price(price, discount)` returns the price minus the discount.
+Write these functions:
 
-Ask the user for the price, call `calculate_discount()`, pass its returned value into `calculate_final_price()`, then display both values.
+- `calculate_bounce_height(current_height)` returns the next bounce height (80% of the current height).
+- `is_ball_stopped(height)` returns `True` if the height is less than 1, otherwise `False`.
+- `calculate_bounce_count(initial_height)` uses a `while` loop and the two functions above to count how many times the ball bounces before it stops, and returns the count.
 
-**Test:** `150` → **Expected:** `Discount: 15.0` and `Final price: 135.0`
+**Sample Input:**
+```
+100
+```
 
-**Test:** `80` → **Expected:** `Discount: 4.0` and `Final price: 76.0`
+**Sample Output:**
+```
+Bounces: 21
+```
 
-## Sum of Numbers <Badge type="warning" text="Task" />
+### Exercise 2: Drone Battery Manager <Badge type="warning" text="Task" />
 
-Save a new file named `sum-numbers.py` in your `lab05` folder. Write a function `sum_up_to(n)` that uses a `while` loop to add the numbers from `1` to `n` and returns the total. Ask the user for `n` and display the result.
+Save a new file named `drone-battery.py` in your `lab05` folder.
 
-**Test:** `10` → **Expected:** `Sum: 55`
+A drone uses **1.5% battery per 10 meters** traveled. It must fly to the survey point and back, so the distance is doubled for the **round trip**. In **Sport Mode**, battery usage **increases by 50%**. The drone is safe to fly if its current battery is at least the usage needed.
+
+Write these functions:
+
+- `calculate_base_usage(distance)` returns the battery used for the round trip.
+- `apply_mode_bonus(usage, sport_mode)` returns the usage increased by 50% if `sport_mode` is `"yes"`, otherwise the usage unchanged.
+- `has_enough_battery(usage, battery)` returns `True` if `battery` is at least `usage`, otherwise `False`.
+
+**Sample Input:**
+```
+100
+44
+yes
+```
+
+**Sample Output:**
+```
+Usage: 45.0
+Safe to fly: False
+```
+
+### Exercise 3: RPG Strike Calculator <Badge type="warning" text="Task" />
+
+Save a new file named `rpg-strike.py` in your `lab05` folder.
+
+A role-playing game calculates combat damage from a hero's **Luck** and **Base Attack**. If the hero's Luck is **above 70**, they land a Critical Hit that **doubles** their attack. The damage dealt is the attack minus the enemy's **Defense**, and it can never be less than 0. The enemy's final health is its health minus the damage, and it can never go below 0.
+
+Write these functions:
+
+- `is_critical_hit(luck)` returns `True` if luck is above 70, otherwise `False`.
+- `calculate_raw_damage(base_attack, is_crit)` returns double the base attack if `is_crit` is `True`, otherwise the base attack.
+- `calculate_damage(raw_damage, defense)` returns `raw_damage - defense`, or `0` if that is negative.
+- `calculate_final_health(health, damage)` returns `health - damage`, or `0` if that is negative.
+
+**Sample Input:**
+```
+100
+50
+80
+10
+```
+
+**Sample Output:**
+```
+Final health: 10
+```
+
+### Exercise 4: Global Shipping Quoter <Badge type="warning" text="Task" />
+
+Save a new file named `shipping-quote.py` in your `lab05` folder.
+
+A shipping firm calculates delivery costs based on weight and destination:
+
+- **Domestic:** RM5.00 per kg
+- **International:** RM15.00 per kg
+- **Express Surcharge:** add a flat RM10.00 if the customer selects express delivery
+
+Write these functions:
+
+- `get_rate_per_kg(destination)` returns `5.0` for `"Domestic"` and `15.0` for `"International"`.
+- `get_express_charge(express)` returns `10.0` if `express` is `"yes"`, otherwise `0.0`.
+- `calculate_shipping_cost(weight, destination)` calls `get_rate_per_kg()` and returns the weight multiplied by the rate.
+
+Add the express charge to the shipping cost to get the final quote.
+
+**Sample Input:**
+```
+2
+International
+yes
+```
+
+**Sample Output:**
+```
+Quote: 40.0
+```
 
 ## Finishing Up
 
 Before you leave, make sure your `lab05` folder contains:
 
 - `practice.py`
-- `temperature.py`
-- `discount.py`
-- `sum-numbers.py`
+- `bouncing-ball.py`, `drone-battery.py`, `rpg-strike.py` and `shipping-quote.py` from the exercises

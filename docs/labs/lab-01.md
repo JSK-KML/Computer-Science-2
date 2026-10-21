@@ -5,9 +5,17 @@ title : Lab 1 - Flowgorithm to Python
 
 # Lab 01 : Flowgorithm to Python
 
+## Overview
+
 In this lab you will draw an algorithm as a flowchart in **Flowgorithm**, run it to test your logic, then export it to **Python** code. You will start with the **sequence** structure and then add **selection**.
 
-## Before You Begin
+### Learning Outcomes
+
+- **3.3** Apply appropriate control structures in computational problem solving.
+- **3.4** Create a flowchart based on a given output using software.
+- **4.8** (i) Demonstrate use of design software and coding platforms.
+
+### Before You Begin
 
 Create a folder for all your CS125 lab work so your files are easy to find.
 
@@ -294,9 +302,57 @@ It will then ask for the location and the name of the image. Name the image `lab
 
 For every question in this lab you produce two files: the flowchart exported as a **PNG image** (`.png`), and the flowchart exported as a **Python file** (`.py`). To create the Python file, export the flowchart the same way you learned in [Exporting Flowgorithm to Python](#exporting-flowgorithm-to-python). Save both into your `lab01` folder, using the names given in the question.
 
-## Selection Questions
+## Exercises
 
-### Scenario 1 - Electricity Bill <Badge type="warning" text="Question" />
+### Exercise 1 - Hotel Reservation <Badge type="warning" text="Question" />
+
+Mr Rahman plans to make a reservation for a hotel room in Langkawi Island. The basic rate is RM250.00 per night and service charge is 15% of the room rate. Determine the total payment if he books the hotel room for n nights.
+
+Inputs:
+
+- `numNight` – integer number of nights
+
+Outputs:
+
+- `totalPayment` – sum of room rate and service charge (RM)
+
+**Sample Input:**
+```
+3
+```
+
+**Sample Output:**
+```
+862.5
+```
+
+Save the PNG image as `exercise-1.png` and the Python file as `exercise-1.py` in your `lab01` folder.
+
+### Exercise 2 - International Fax Cost <Badge type="warning" text="Question" />
+
+Amin's program calculates the cost of sending an international fax: service charge RM3.00 plus RM0.20 per page.
+
+Inputs:
+
+- `pages` – integer number of pages
+
+Outputs:
+
+- `totalCost` – sum of service charge and pages cost
+
+**Sample Input:**
+```
+10
+```
+
+**Sample Output:**
+```
+5.0
+```
+
+Save the PNG image as `exercise-2.png` and the Python file as `exercise-2.py` in your `lab01` folder.
+
+### Exercise 3 - Electricity Bill <Badge type="warning" text="Question" />
 
 A utility company charges RM0.30 per kWh for the first 100 kWh, RM0.50 per kWh for the next 100 kWh (101–200 kWh), and RM0.75 per kWh for any usage above 200 kWh.
 
@@ -310,9 +366,19 @@ Outputs:
 
 - `totalBill` – the total electricity bill
 
-Save the PNG image as `scenario-1.png` and the Python file as `scenario-1.py` in your `lab01` folder.
+**Sample Input:**
+```
+250
+```
 
-### Scenario 2 - Baggage Allowance Logic <Badge type="warning" text="Question" />
+**Sample Output:**
+```
+117.5
+```
+
+Save the PNG image as `exercise-3.png` and the Python file as `exercise-3.py` in your `lab01` folder.
+
+### Exercise 4 - Baggage Allowance Logic <Badge type="warning" text="Question" />
 
 A flight ticket includes 15 kg of free baggage. Excess baggage is charged RM4.00 per kg beyond that limit. However, if the passenger brings no baggage, they receive a RM10.00 discount on the total ticket price.
 
@@ -328,7 +394,18 @@ Outputs:
 
 - `finalPrice` – the final price to pay
 
-Save the PNG image as `scenario-2.png` and the Python file as `scenario-2.py` in your `lab01` folder.
+**Sample Input:**
+```
+20
+500
+```
+
+**Sample Output:**
+```
+520
+```
+
+Save the PNG image as `exercise-4.png` and the Python file as `exercise-4.py` in your `lab01` folder.
 
 ## Finishing Up
 
@@ -336,6 +413,6 @@ Before you leave, make sure your `lab01` folder contains:
 
 - `lab-01-1.fprg` and `lab-01-1.py` from the sequence walkthrough,
 - `lab-01-2.png` and `lab-01-2.py` from the selection walkthrough, and
-- `scenario-1` and `scenario-2`, each as a `.png` **and** a `.py` file.
+- `exercise-1` to `exercise-4`, each as a `.png` **and** a `.py` file.
 
 Show your completed work to your lecturer.

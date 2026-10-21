@@ -5,9 +5,16 @@ title : Lab 3 - Repetition
 
 # Lab 03 : Repetition
 
+## Overview
+
 Repetition runs the same statements many times. There are two types: **counter-controlled** and **sentinel-controlled**.
 
-## Before You Begin
+### Learning Outcomes
+
+- **5.5** Apply counter-controlled and sentinel-controlled repetition structures to solve given problems using Python.
+- **5.6** Construct Python programs using counter-controlled and sentinel-controlled repetition structures to solve given problems.
+
+### Before You Begin
 
 Inside your `yourname-cs125` folder, create a new folder named `lab03`. You will save every file for this lab inside `lab03`.
 
@@ -33,7 +40,7 @@ range(start, stop, step)
 
 ### range(stop)
 
-With one number, the count starts at `0` and goes up by `1`:
+With one number, the count starts at `0` and goes up by `1`. <Badge type="warning" text="Run the below code" />
 
 ```python
 for count in range(4):
@@ -44,7 +51,7 @@ for count in range(4):
 
 ### range(start, stop)
 
-With two numbers, you choose where to start:
+With two numbers, you choose where to start. <Badge type="warning" text="Run the below code" />
 
 ```python
 for number in range(1, 6):
@@ -55,7 +62,7 @@ for number in range(1, 6):
 
 ### range(start, stop, step)
 
-With three numbers, you also choose how much to jump each time:
+With three numbers, you also choose how much to jump each time. <Badge type="warning" text="Run the below code" />
 
 ```python
 for number in range(1, 10, 2):
@@ -74,14 +81,14 @@ for number in range(1, 10, 2):
 
 ### Negative Step: Counting Down
 
-When `step` is **negative**, the loop counts **down** instead of up. `start` must now be **bigger** than `stop`, and the loop stops **before** reaching `stop`, just like before.
+When `step` is **negative**, the loop counts **down** instead of up. `start` must now be **bigger** than `stop`, and the loop stops **before** reaching `stop`, just like before. <Badge type="warning" text="Run the below code" />
 
 ```python
 for number in range(5, 0, -1):
     print(number)
 ```
 
-**Output:** `5 4 3 2 1`. It starts at `5`, subtracts `1` each time, and stops before `0`, so `0` is not printed.
+**Output:** `5 4 3 2 1`. It starts at `5`, subtracts `1` each time, and stops before `0`, so `0` is not printed. <Badge type="warning" text="Run the below code" />
 
 ```python
 for number in range(10, 0, -2):
@@ -90,7 +97,7 @@ for number in range(10, 0, -2):
 
 **Output:** `10 8 6 4 2`. It subtracts `2` each time and stops before `0`.
 
-If the direction is wrong, the loop runs **zero** times and prints nothing:
+If the direction is wrong, the loop runs **zero** times and prints nothing. <Badge type="warning" text="Run the below code" />
 
 ```python
 for number in range(1, 5, -1):
@@ -107,7 +114,7 @@ Starting at `1` and counting **down** can never get closer to `5`, so there is n
 
 ### Number of Repetitions from the User
 
-The number of repetitions can come from the user:
+The number of repetitions can come from the user. <Badge type="warning" text="Run the below code" />
 
 ```python
 times = int(input("How many times? "))
@@ -124,6 +131,8 @@ A counter-controlled loop can also be written with `while`. With `for`, `range()
 | 1. **Initial counter** | Gives the counter its starting value | **Before** the loop |
 | 2. **Condition** | Checks whether the loop should continue | In the `while` line |
 | 3. **Update counter** | Changes the counter each time | At the **end** of the loop body |
+
+Run it. <Badge type="warning" text="Run the below code" />
 
 ```python
 count = 1                 # 1. initial counter
@@ -143,7 +152,7 @@ The three components match the three parts of `range()`:
 | `stop` = `6` | Condition: `count <= 5` (or `count < 6`) |
 | `step` = `1` | Update counter: `count = count + 1` |
 
-Counting down works the same way, with a negative update:
+Counting down works the same way, with a negative update. <Badge type="warning" text="Run the below code" />
 
 ```python
 count = 5                 # 1. initial counter
@@ -226,7 +235,7 @@ while count >= 1:
 
 ## Counter and Accumulator
 
-An **accumulator** is a variable that builds up a total inside the loop. Give it a starting value **before** the loop.
+An **accumulator** is a variable that builds up a total inside the loop. Give it a starting value **before** the loop. <Badge type="warning" text="Run the below code" />
 
 ```python
 total = 0
@@ -257,6 +266,8 @@ A sentinel-controlled loop also has **three components**. They match the counter
 | 1. **Initial input** | Reads the first value, so the condition has something to check | **Before** the loop |
 | 2. **Condition** | Checks whether the value is the sentinel | In the `while` line |
 | 3. **Update input** | Reads the next value, so the loop can stop | At the **end** of the loop body |
+
+Run it. <Badge type="warning" text="Run the below code" />
 
 ```python
 total = 0
@@ -289,7 +300,111 @@ If you forget the **update input**, `mark` never changes and the loop runs forev
 
 Save a new file named `average-marks.py` in your `lab03` folder. Using a sentinel-controlled loop with `-1` as the sentinel, keep asking for marks. When the user enters `-1`, display how many marks were entered and their average.
 
-**Test:** `80`, `70`, `90`, `-1` → **Expected:** `Count: 3` and `Average: 80.0`
+**Sample Input:**
+```
+80
+70
+90
+-1
+```
+
+**Sample Output:**
+```
+Count: 3
+Average: 80.0
+```
+
+## Exercises
+
+### Exercise 1: Score Accumulator <Badge type="warning" text="Task" />
+
+Save a new file named `score-accumulator.py` in your `lab03` folder. A game adds up a player's score over several rounds. The number of rounds is given first. Using a `for` loop, ask for each round's score and add it to a running total. If a round's score is above 100, that round earns a 20% bonus, so add the score plus the bonus for that round.
+
+At the end, display the final total score and the number of rounds played.
+
+**Sample Input:**
+```
+2
+80
+120
+```
+
+**Sample Output:**
+```
+Total: 224.0
+Rounds: 2
+```
+
+A score of `80` adds 80 (no bonus), and a score of `120` adds `120 + 24 = 144`.
+
+### Exercise 2: Temperature Monitor <Badge type="warning" text="Task" />
+
+Save a new file named `temperature-monitor.py` in your `lab03` folder. A weather station records temperatures over several days. The number of days and a danger threshold are given first. Using a `for` loop, ask for each day's temperature. Count how many days are **above** the threshold (danger days), and keep a running total so you can work out the average temperature across all the days.
+
+At the end, display the number of danger days and the average temperature.
+
+**Sample Input:**
+```
+4
+35
+32
+37
+34
+39
+```
+
+**Sample Output:**
+```
+Danger days: 2
+Average: 35.5
+```
+
+### Exercise 3: Point Accumulator <Badge type="warning" text="Task" />
+
+Save a new file named `point-accumulator.py` in your `lab03` folder. A player collects points to reach a target. The target is given first. Starting from a total of 0, use a `while` loop that keeps asking for points and adding them to the total, and count how many times you asked. The loop stops once the total reaches or passes the target.
+
+At the end, display the final total and the number of rounds played.
+
+**Sample Input:**
+```
+100
+30
+45
+35
+```
+
+**Sample Output:**
+```
+Total: 110
+Rounds: 3
+```
+
+The totals are 30, 75, then 110. Since 110 reaches the target, the loop stops.
+
+### Exercise 4: Winning Margin <Badge type="warning" text="Task" />
+
+Save a new file named `winning-margin.py` in your `lab03` folder. Two players take turns scoring. Scores are entered one at a time until `-1` ends the game. The 1st, 3rd, 5th and other odd-numbered scores belong to Player A, and the 2nd, 4th, 6th and other even-numbered scores belong to Player B.
+
+At the end, display Player A's total, Player B's total, and the winner (`A`, `B`, or `Tie`).
+
+**Sample Input:**
+```
+10
+8
+5
+12
+7
+-1
+```
+
+**Sample Output:**
+```
+Player A: 22
+Player B: 20
+Winner: A
+```
+
+Player A gets `10 + 5 + 7 = 22` and Player B gets `8 + 12 = 20`.
 
 ## Finishing Up
 
@@ -297,3 +412,4 @@ Before you leave, make sure your `lab03` folder contains:
 
 - `practice.py`
 - `average-marks.py` from the task
+- `score-accumulator.py`, `temperature-monitor.py`, `point-accumulator.py` and `winning-margin.py` from the exercises

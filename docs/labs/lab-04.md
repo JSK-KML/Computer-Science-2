@@ -203,6 +203,55 @@ Before: 88
 After: 91
 ```
 
+## List Operations
+
+Basic list operations include creating a list and updating its elements.
+
+### Creating a List
+
+A list can be created empty, or with elements already inside it.
+
+```python
+shopping = []
+numbers = [10, 20, 30, 40, 50]
+temperatures = [36.5, 37.2, 36.8, 37.0]
+```
+
+### Updating a List
+
+A list is **mutable**: its elements can be changed after it is created. To change an element, assign a new value to it through its index.
+
+Run it, then compare the two printed lines: which element changed, and which stayed the same? <Badge type="run" text="Run the below code" />
+
+```python
+fruits = ["apple", "banana", "kiwi"]
+print(fruits)
+
+fruits[1] = "orange"
+print(fruits)
+```
+
+Updating also works with negative indexes.
+
+Run it. Which two cities were replaced? Count from the right to confirm `-1` and `-3` landed where you expected. <Badge type="run" text="Run the below code" />
+
+```python
+cities = ["KL", "Penang", "JB", "Malacca"]
+cities[-1] = "Ipoh"
+cities[-3] = "Shah Alam"
+print(cities)
+```
+
+### Exercises: Basic <Badge type="warning" text="Task" />
+
+Use the list `scores = [70, 65, 80, 75, 85]` for these.
+
+1. Print the original list.
+2. Change the first score to `75` using a positive index.
+3. Change the third score to `90` using a positive index.
+4. Change the last score to `95` using a negative index.
+5. Print the final list after all three changes.
+
 ## Looping Through a List
 
 Reaching one element at a time with an index works, but most of the time you want to visit **every** element in a list. A loop does this for you. There are two common ways to loop through a list: a `for` loop with an index, and a `while` loop.
@@ -332,65 +381,14 @@ Students who passed: 4
 True
 ```
 
-## List Operations
-
-Basic list operations include creating a list and updating its elements.
-
-### Creating a List
-
-A list can be created empty, or with elements already inside it.
-
-```python
-shopping = []
-numbers = [10, 20, 30, 40, 50]
-temperatures = [36.5, 37.2, 36.8, 37.0]
-```
-
-### Updating a List
-
-A list is **mutable**: its elements can be changed after it is created. To change an element, assign a new value to it through its index.
-
-Run it, then compare the two printed lines: which element changed, and which stayed the same? <Badge type="run" text="Run the below code" />
-
-```python
-fruits = ["apple", "banana", "kiwi"]
-print(fruits)
-
-fruits[1] = "orange"
-print(fruits)
-```
-
-Updating also works with negative indexes.
-
-Run it. Which two cities were replaced? Count from the right to confirm `-1` and `-3` landed where you expected. <Badge type="run" text="Run the below code" />
-
-```python
-cities = ["KL", "Penang", "JB", "Malacca"]
-cities[-1] = "Ipoh"
-cities[-3] = "Shah Alam"
-print(cities)
-```
-
-### Exercises: Basic <Badge type="warning" text="Task" />
-
-Use the list `scores = [70, 65, 80, 75, 85]` for these.
-
-1. Print the original list.
-2. Change the first score to `75` using a positive index.
-3. Change the third score to `90` using a positive index.
-4. Change the last score to `95` using a negative index.
-5. Print the final list after all three changes.
-
-### Exercises: Problem Solving <Badge type="warning" text="Task" />
-
-6. A warehouse restocks any product whose stock has run low. Given the stock list `stock = [12, 25, 8, 30, 15]`, add `5` units to every item that is **below 20**, leaving the others unchanged. Print the updated list.
+8. A warehouse restocks any product whose stock has run low. Given the stock list `stock = [12, 25, 8, 30, 15]`, add `5` units to every item that is **below 20**, leaving the others unchanged. Print the updated list.
 
 **Sample Output:**
 ```
 Updated stock: [17, 25, 13, 30, 20]
 ```
 
-7. A school records exam marks and applies a rule: any **failing mark** (below 40) is recorded as `0`. Given `marks = [55, 38, 72, 41, 29, 90]`, replace every failing mark with `0`, then print the updated list.
+9. A school records exam marks and applies a rule: any **failing mark** (below 40) is recorded as `0`. Given `marks = [55, 38, 72, 41, 29, 90]`, replace every failing mark with `0`, then print the updated list.
 
 **Sample Output:**
 ```
